@@ -22,13 +22,14 @@ class MyApp(QWidget):
     def __init__(self):
         super().__init__()
         self.label_progress = QLabel("remain data 0", self)
+        self.label_progress.hide()
         self.edit_url_input = QLineEdit(self)
         self.edit_output_dir = QLineEdit(self)
         self.edit_output_dir.setText(QStandardPaths.writableLocation (QStandardPaths.StandardLocation.MoviesLocation))
         self.init_UI()
 
     def init_UI(self):
-        self.setWindowTitle('Youtube media convert')
+        self.setWindowTitle('Youtube Downloader')
 
         layout_main = QVBoxLayout()
         layout_main.setAlignment(Qt.AlignTop)
